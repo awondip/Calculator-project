@@ -1,6 +1,8 @@
 # Calculator Project 
 This project is  all about a calculator that will be able to carry out mathematical operations.
 
+[Live Site](https://awondip.github.io/Calculator-project/)
+
 ## Features
 * This project has the ability to carry out mathematical operation such as addition, substraction , multiplication and division. 
 * And an appropriate final answer will be deliverd at end of the operation.
