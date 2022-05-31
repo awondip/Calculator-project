@@ -12,7 +12,7 @@ This project is  all about a calculator that will be able to carry out mathemati
 
 #### Running the project
 
-1) Clone this project locally
+1) Clone this project locally.
 
 2) Run this commmands in the command line
  
