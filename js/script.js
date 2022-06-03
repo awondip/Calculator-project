@@ -94,6 +94,7 @@ class Calculator {
   }
 }
 
+//Adding Keyboard support
 
 const numberButtons = document.querySelectorAll('[data-number]')
 const operationButtons = document.querySelectorAll('[data-operation]')
@@ -112,11 +113,51 @@ numberButtons.forEach(button => {
   })
 })
 
+
+document.addEventListener('keyup', (e) => {
+  const operators = {
+    '+': 'plus',
+    '-': 'minus',
+    '*': 'multiply',
+    '÷': 'divide',
+  };
+
+  let targetKey = e.key
+
+  if (!Number.isNaN(+targetKey) && targetKey !== ' '){
+    document.getElementById(targetKey).click()
+
+  } else if (targetKey === 'Backspace'){
+    document.getElementById('backspace').click()
+
+  } else if (targetKey === 'Delete' || e.key === 'c' || e.key === 'C') {
+     document.getElementById('clear').click();
+  
+  }else if (targetKey === '.') {
+      document.getElementById('decimal').click();
+
+  }else if ( targetKey === '='){
+
+     document.getElementById('equal').click()
+
+  } else if (  ['+', '-', '*', '÷'].includes(targetKey)){
+    document.getElementById(operators[targetKey]).click()
+
+  }else {
+      console.log('Wrong key:', e.key);
+    }
+
+})
+
+
+
 operationButtons.forEach(button => {
   button.addEventListener('click', () => {
     calculator.chooseOperation(button.innerText)
     calculator.updateDisplay()
+
   })
+  
 })
 
 equalsButton.addEventListener('click', button => {
@@ -133,6 +174,10 @@ deleteButton.addEventListener('click', button => {
   calculator.delete()
   calculator.updateDisplay()
 })
+
+ 
+
+
 
 
 
