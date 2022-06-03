@@ -19,6 +19,7 @@ body{
     min-height: 50vh;
     padding: 15px;
     font-size: 20px;
+    
 
 
 }
@@ -53,10 +54,15 @@ body{
     word-break: break-all;
     border: 1px solid;
     height: 130px;
+    max-width: 348px;
 }
 .previous-operand , .current-operand{
     color: aliceblue;
     font-weight: bold;
     font-size: 20px;
 
+}
+
+.equal-button {
+    width: 230% ;
 }
